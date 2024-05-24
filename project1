@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>archivePDF</title>
     <style>
-        /* header1 시작 */
+        /* header 시작 */
+        .headerBackground{
+            width: 100%;
+            background-image: url("green background art1.png");
+            height: 900px;
+        }
+
         #pdflogo{
             position: absolute;   /* top, left 사용을 위해 position 지정 */
             width:60px;
@@ -19,12 +26,14 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 20px;
+            position: relative;
+            bottom: 2%;
         }
 
         #home{
-            position: absolute;
-            top: 41px;
-            bottom: 41px;
+            position: relative;
+            width: 43px;
+            height: 5px;
             left: 1206px;
             right: 671px;
         }
@@ -108,11 +117,6 @@
             height: 766px;
         }
 
-        .headerBackground{
-            height: 900px;
-            width: 1920px;
-            background-image: url("green background art1.png");
-        }
         /* Header2 끝 */
         /* Main1 시작 */
         #kapital{
@@ -275,10 +279,9 @@
         /* 지도부분 부터 시작 */
         /* 지도 위 구분선 */
         .line{
-            position: absolute;
-            top: 3100px;
-            left: 320px;
-            right: 320px;
+            position: relative;
+            top: 2200px;
+            right: 50px;
             width: 1278px;
             height: 1px;
             color: #C4C4C4;
@@ -393,6 +396,15 @@
             z-index: -1;        /* 요소 맨뒤로 가게끔 */
         }
 
+        /* scroll up 버튼 */
+        #scrollBut{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            bottom: 200px;
+            left: 1400px;
+        }
+
         /* footer 시작 */
         .footer{
             height: 160px;
@@ -433,12 +445,12 @@
             display: none;
             position: fixed;
             z-index: 1;
-            width: 50%;
+            width: 30%;
             height: 50%;
             overflow: auto;
             background-image: url("subModalBackground.png");
-            left: 0;
-            top: 0;
+            left: 700px;
+            top: 300px;
         }
         #pdfLogoForModal{
             width: 110px;
@@ -470,6 +482,8 @@
             border: none;
             position: relative;
         }
+
+
 
 
 
@@ -529,6 +543,9 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+
+
     </style>
 </head>
 
@@ -553,6 +570,7 @@
         </article>
             <img src="nn%20art1.png" alt="numbernine model" id="nnModel">
     </header>
+
     <main>
         <section>
             <img src="kap%20scanbook.png" alt="kapital bookscan" id="kapital">
@@ -632,7 +650,7 @@
                     <div class="whiteBox">
                         <label for="mail"></label>
                         <input type="email" autocomplete="on" placeholder="Enter your e-mail address" id="mail" name="mail">
-                        <button id="subButton">Subscribe</button>
+                        <button type="button" id="subButton">Subscribe</button>
                         <img src="mail.png" alt="" id="mailPic">
                     </div>
                 </form>
@@ -647,7 +665,11 @@
             <a href=""><img src="facebooklogo.jpg" id="facebooklogo" alt="facebookLogo"></a>
             <a href=""><img src="youtubelogo.jpg" id="youtubelogo" alt="youtubeLogo"></a>
 
-            <button id="scrollBut">scroll</button>
+            <!-- 스크롤 버튼 -->
+            <button id="scrollBut" onclick="scrollToTop()">
+                <img src="arrowbefore.png" alt="scroll Up Button" id="arrowbefore">
+                <img src="arrowafter.png" alt="scroll Up Button" id="arrowafter" style="display: none">
+            </button>
         </footer>
 
 
@@ -784,6 +806,34 @@
                 }
             }
         </script>
+
+        <!-- scroll 버튼 -->
+        <script>
+            const arrowBefore = document.getElementById('arrowbefore');
+            const arrowAfter = document.getElementById('arrowafter');
+
+            const scrollBut = document.getElementById('scrollBut');
+            scrollBut.addEventListener('mouseover', showArrowAfter);
+            scrollBut.addEventListener('mouseout', showArrowBefore);
+
+            function showArrowAfter() {
+                arrowBefore.style.display = 'none';
+                arrowAfter.style.display = 'inline';
+            }
+
+            function showArrowBefore() {
+                arrowBefore.style.display = 'inline';
+                arrowAfter.style.display = 'none';
+            }
+
+            function scrollToTop() {
+                window.scrollTo({top:0, behavior:'smooth'});
+            }
+        </script>
+
+
+
+
 
     </main>
 </body>
