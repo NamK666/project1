@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>archivePDF</title>
     <style>
+        .body{
+            @media (max-width: 400px) {
+                width: 400px;
+            }
+        }
+
         /* header 시작 */
         .headerBackground{
             width: 100%;
@@ -32,6 +38,8 @@
                 left: 20px;
             }
         }
+
+
         /* 모바일 메뉴 */
         .sidebar {
             height: 100%;
@@ -77,7 +85,15 @@
             position: absolute;
             top: 30px;
             left: 330px;
+            display: none;
+            }
+
+        @media (max-width: 400px) {
+            .mobileBut {
+                display: block; /* 모바일 환경에서 표시 */
+            }
         }
+
         .mobileBut:hover {
             background-color: #444;
         }
@@ -140,7 +156,7 @@
             align-content: center;
             font-weight: 700; /* 글꼴 굵기 */
             border: none;    /* 테두리 없애기 */
-        /* header1 끝 */
+            /* header1 끝 */
         }
         /* header2 시작 */
         #art1subject{
@@ -332,7 +348,7 @@
                 left: 42px;
             }
         }
-/* 사진 리스트 시작 */
+        /* 사진 리스트 시작 */
         #uc1{
             width: 378px;
             height: 378px;
@@ -763,186 +779,182 @@
 
 <body class="body">
 
-    <header class="headerBackground">
-        <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo" alt="homeLogo"></a>
-        <section class="headerSec">
-            <a href=""><div id="home">Home</div></a>
-            <a href=""><div id="about">About</div></a>
-            <a href=""><div id="support">Support</div></a>
-        </section>
-        <a href=""><button id="download">Download</button></a>
+<header class="headerBackground">
+    <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo" alt="homeLogo"></a>
+    <section class="headerSec">
+        <a href=""><div id="home">Home</div></a>
+        <a href=""><div id="about">About</div></a>
+        <a href=""><div id="support">Support</div></a>
+    </section>
+    <a href=""><button id="download">Download</button></a>
 
-        <article>
-            <h1 id="art1subject"> Deconstructed Silhouettes of <br>
-                Number (N)ine</h1>
-            <h2 id="art1story">Influenced by Kurt Cobain and Native American culture, in 2005,
+    <article>
+        <h1 id="art1subject"> Deconstructed Silhouettes of <br>
+            Number (N)ine</h1>
+        <h2 id="art1story">Influenced by Kurt Cobain and Native American culture, in 2005,
             <br>Takahiro Miyashita released his most seminal work
             <br>at Number (N)ine: “The High Streets.”</h2>
-            <a href=""><button id="fullArt1">Full Article</button></a>
-        </article>
-            <img src="nn%20art1.png" alt="numbernine model" id="nnModel">
+        <a href=""><button id="fullArt1">Full Article</button></a>
+    </article>
+    <img src="nn%20art1.png" alt="numbernine model" id="nnModel">
 
-        <!-- 모바일 메뉴 버튼 -->
-        <div id="mobileMain">
+    <!-- 모바일 메뉴 버튼 -->
+    <div id="mobileMain">
         <button class="mobileBut" onclick="openMenu()">
             ☰</button>
+    </div>
+
+    <!-- 모바일 사이드 메뉴 -->
+    <section>
+        <div class="sidebar">
+            <a class="closebtn" onclick="closeMenu()">×</a>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Support</a>
+            <a href=""><button id="mobileDownload">Download</button></a>
         </div>
 
-        <!-- 모바일 사이드 메뉴 -->
-        <section>
-           <div class="sidebar">
-               <a class="closebtn" onclick="closeMenu()">×</a>
-               <a href="">Home</a>
-               <a href="">About</a>
-               <a href="">Support</a>
-               <a href=""><button id="mobileDownload">Download</button></a>
-           </div>
-
-        </section>
+    </section>
 
 
 
-    </header>
+</header>
 
-    <main>
+<main>
 
 
-        <section>
-            <img src="kap%20scanbook.png" alt="kapital bookscan" id="kapitalimg">
-            <h1 id="freeaccIntro1">You Can Get A Free Access
+    <section>
+        <img src="kap%20scanbook.png" alt="kapital bookscan" id="kapitalimg">
+        <h1 id="freeaccIntro1">You Can Get A Free Access
             <br>to Various Designer Book Scans</h1>
-            <h2 id="freeaccIntro2">Ann Demeulemeester, Carol Christian Poell, Helmut Lang, Comme Des Garcons,
-                <br>Martin Margiela, Yohji Yamamoto, Issey Miyake and more..</h2>
-            <p>
-                <h1 id="freeaccIntro3">Contact Us for the Physical Books</h1>
-                <h2 id="freeaccIntro4">We own more than 500+ physical books from 1970s to 2010s.
-                <br>Contact us for more detailed information.</h2>
-            </p>
-        </section>
+        <h2 id="freeaccIntro2">Ann Demeulemeester, Carol Christian Poell, Helmut Lang, Comme Des Garcons,
+            <br>Martin Margiela, Yohji Yamamoto, Issey Miyake and more..</h2>
+        <p>
+        <h1 id="freeaccIntro3">Contact Us for the Physical Books</h1>
+        <h2 id="freeaccIntro4">We own more than 500+ physical books from 1970s to 2010s.
+            <br>Contact us for more detailed information.</h2>
+        </p>
+    </section>
 
-        <section>
-            <div class="galleryContainer">
-                <div id="gallery">
-                    <img src="uc1.png" alt="undercover snapshot1" id="uc1">
-                    <img src="uc2.png" alt="undercover snapshot2" id="uc2">
-                    <img src="uc3.png" alt="undercover snapshot3" id="uc3">
+    <section>
+        <div class="galleryContainer">
+            <div id="gallery">
+                <img src="uc1.png" alt="undercover snapshot1" id="uc1">
+                <img src="uc2.png" alt="undercover snapshot2" id="uc2">
+                <img src="uc3.png" alt="undercover snapshot3" id="uc3">
 
-                    <img src="solo1.png" alt="soloist snapshot1" id="solo1">
-                    <img src="solo2.png" alt="soloist snapshot1" id="solo2">
-                    <img src="solo3.png" alt="soloist snapshot1" id="solo3">
-                </div>
-
-                <div id="hiddenImgs" style="display: none";>
-                    <img src="raf1.png" alt="rafsimons snapshot1" id="raf1">
-                    <img src="raf2.png" alt="rafsimons snapshot2" id="raf2">
-                    <img src="raf3.png" alt="rafsimons snapshot3" id="raf3">
-                </div>
-
-                <div>
-                    <span id="continueEx">Continue exploring Scans</span>
-                    <button id="showMore">Show more</button>
-                </div>
-
-                <!-- 이미지 확대 모달창 형성 -->
-                <div id="imageModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="modalImage">
-                </div>
+                <img src="solo1.png" alt="soloist snapshot1" id="solo1">
+                <img src="solo2.png" alt="soloist snapshot1" id="solo2">
+                <img src="solo3.png" alt="soloist snapshot1" id="solo3">
             </div>
-        </section>
 
-        <section>
-            <!-- 지도 바로 윗부분 -->
-            <div class="lineParents">
+            <div id="hiddenImgs" style="display: none";>
+                <img src="raf1.png" alt="rafsimons snapshot1" id="raf1">
+                <img src="raf2.png" alt="rafsimons snapshot2" id="raf2">
+                <img src="raf3.png" alt="rafsimons snapshot3" id="raf3">
+            </div>
+
+            <div>
+                <span id="continueEx">Continue exploring Scans</span>
+                <button id="showMore">Show more</button>
+            </div>
+
+            <!-- 이미지 확대 모달창 형성 -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- 지도 바로 윗부분 -->
+        <div class="lineParents">
             <hr class="line">
-            </div>
-            <h1 id="location">Showroom Location</h1>
-            <h2 id="location2">3F, 108, Yeoui-daero, Yeongdeungpo-gu, Seoul, Republic of Korea</h2>
+        </div>
+        <h1 id="location">Showroom Location</h1>
+        <h2 id="location2">3F, 108, Yeoui-daero, Yeongdeungpo-gu, Seoul, Republic of Korea</h2>
 
-            <!-- 지도 -->
-            <div class="map_wrap">
-                <div id="map" style="width:1278px; height:520px;"></div>
+        <!-- 지도 -->
+        <div class="map_wrap">
+            <div id="map" style="width:1278px; height:520px;"></div>
 
-                <!-- 지도타입 컨트롤 div -->
-                <div class="custom_typecontrol radius_border">
-                    <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
-                    <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
-                </div>
-
-                <!-- 지도 확대, 축소 컨트롤 div -->
-                <div class="custom_zoomcontrol radius_border">
-                    <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>
-                    <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
-                </div>
+            <!-- 지도타입 컨트롤 div -->
+            <div class="custom_typecontrol radius_border">
+                <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+                <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
             </div>
 
-        </section>
+            <!-- 지도 확대, 축소 컨트롤 div -->
+            <div class="custom_zoomcontrol radius_border">
+                <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>
+                <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+            </div>
+        </div>
 
-        <!-- Subscribe 부분 시작 -->
-        <section>
-            <div class="navyBox">
-                <h1 id="subscribe1">Subscribe to our Post</h1>
-                <h2 id="subscribe2"><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </section>
+
+    <!-- Subscribe 부분 시작 -->
+    <section>
+        <div class="navyBox">
+            <h1 id="subscribe1">Subscribe to our Post</h1>
+            <h2 id="subscribe2"><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 <br>A adipisci labore asdfads dfadsf</h2>
-                <form action="" method="post">
-                    <div class="whiteBox">
-                        <label for="mail"></label>
-                        <input type="email" autocomplete="on" placeholder="Enter your e-mail address" id="mail" name="mail">
-                        <button type="button" id="subButton">Subscribe</button>
-                        <img src="mail.png" alt="" id="mailPic">
-                    </div>
-                </form>
-            </div>
-            <!-- Subscribe 뒤 배경 -->
-            <div class="subBackground"></div>
-        </section>
+            <form action="" method="post">
+                <div class="whiteBox">
+                    <label for="mail"></label>
+                    <input type="email" autocomplete="on" placeholder="Enter your e-mail address" id="mail" name="mail">
+                    <button type="button" id="subButton">Subscribe</button>
+                    <img src="mail.png" alt="" id="mailPic">
+                </div>
+            </form>
+        </div>
+        <!-- Subscribe 뒤 배경 -->
+        <div class="subBackground"></div>
+    </section>
 
-        <footer class="footer">
-            <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo2" alt="homeLogo"></a>
-            <a href=""><img src="instalogo.jpg" id="instalogo" alt="instaLogo"></a>
-            <a href=""><img src="facebooklogo.jpg" id="facebooklogo" alt="facebookLogo"></a>
-            <a href=""><img src="youtubelogo.jpg" id="youtubelogo" alt="youtubeLogo"></a>
+    <footer class="footer">
+        <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo2" alt="homeLogo"></a>
+        <a href=""><img src="instalogo.jpg" id="instalogo" alt="instaLogo"></a>
+        <a href=""><img src="facebooklogo.jpg" id="facebooklogo" alt="facebookLogo"></a>
+        <a href=""><img src="youtubelogo.jpg" id="youtubelogo" alt="youtubeLogo"></a>
 
-            <!-- 스크롤 버튼 -->
-            <button id="scrollBut" onclick="scrollToTop()">
-                <img src="arrowbefore.png" alt="scroll Up Button" id="arrowbefore">
-                <img src="arrowafter.png" alt="scroll Up Button" id="arrowafter" style="display: none">
-            </button>
-        </footer>
-
-
-
-        <!-- subscribe Modal 창 -->
-        <section id="subModal" class="subModal">
-            <div class="modal-content">
-                <img src="logoForModal.png" alt="archivePdf Logo" id="pdfLogoForModal">
-                <h1 id="modalH1">Thank you!</h1>
-                <h2 id="modalH2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-                <button id="subModalclose">Confirm</button>
-            </div>
-
-        </section>
+        <!-- 스크롤 버튼 -->
+        <button id="scrollBut" onclick="scrollToTop()">
+            <img src="arrowbefore.png" alt="scroll Up Button" id="arrowbefore">
+            <img src="arrowafter.png" alt="scroll Up Button" id="arrowafter" style="display: none">
+        </button>
+    </footer>
 
 
 
+    <!-- subscribe Modal 창 -->
+    <section id="subModal" class="subModal">
+        <div class="modal-content">
+            <img src="logoForModal.png" alt="archivePdf Logo" id="pdfLogoForModal">
+            <h1 id="modalH1">Thank you!</h1>
+            <h2 id="modalH2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+            <button id="subModalclose">Confirm</button>
+        </div>
 
-        <!-- 사이드 메뉴 시작 -->
-        <script>
-            function openMenu() {
-                document.getElementById("mobileMain").style.marginRight = "250px";
-                document.querySelector('.sidebar').style.width = "250px";
-                document.querySelector('.mobileBut').style.display = 'none';
-            }
-
-            function  closeMenu() {
-                document.getElementById("mobileMain").style.marginRight= "0";
-                document.querySelector('.sidebar').style.width = "0";
-                document.querySelector('.mobileBut').style.display = 'block';
-            }
+    </section>
 
 
 
-        </script>
+
+    <!-- 사이드 메뉴 시작 -->
+    <script>
+        function openMenu() {
+            document.querySelector('.sidebar').style.width = "250px";
+            document.querySelector('.mobileBut').style.display = 'none';
+        }
+
+        function  closeMenu() {
+            document.getElementById("mobileMain").style.marginRight= "0";
+            document.querySelector('.sidebar').style.width = "0";
+        }
+
+    </script>
 
 
 
@@ -953,156 +965,156 @@
 
 
 
-                    <!-- 이미지 시작 -->
-            <script>
-                const gallery = document.getElementById('gallery');
-                const hiddenImgs = document.getElementById('hiddenImgs');
-                const continueEx = document.getElementById('continueEx')
-                const showMore = document.getElementById('showMore');
+    <!-- 이미지 시작 -->
+    <script>
+        const gallery = document.getElementById('gallery');
+        const hiddenImgs = document.getElementById('hiddenImgs');
+        const continueEx = document.getElementById('continueEx')
+        const showMore = document.getElementById('showMore');
 
-                showMore.addEventListener('click', function (){
-                    hiddenImgs.style.display = 'block';
-                    continueEx.style.display = 'none';
-                    showMore.style.display = 'none';
-                });
+        showMore.addEventListener('click', function (){
+            hiddenImgs.style.display = 'block';
+            continueEx.style.display = 'none';
+            showMore.style.display = 'none';
+        });
 
-                /* 이미지 모달창 표시 설정 */
-                function showModal(imgSrc) {
-                    const modal = document.getElementById("imageModal");
-                    const modalImg = document.getElementById("modalImage");
-                    modal.style.display = "block";
-                    modalImg.src =imgSrc;  // modalImg 요소의 src속성에 imgSrc값 할당 (모달창 내부에 있는 <img>요소의 소스가 imgSrc값으로 변경되어 해당 이미지가 모달창에 표시됨.
-                }
+        /* 이미지 모달창 표시 설정 */
+        function showModal(imgSrc) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src =imgSrc;  // modalImg 요소의 src속성에 imgSrc값 할당 (모달창 내부에 있는 <img>요소의 소스가 imgSrc값으로 변경되어 해당 이미지가 모달창에 표시됨.
+        }
 
-                /* 이미지 모달창 닫기 설정 */
-                function closeModal() {
-                    const modal = document.getElementById("imageModal");
-                    modal.style.display = "none";
-                }
+        /* 이미지 모달창 닫기 설정 */
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
 
-                /* 이미지 클릭 이벤트 리스너 추가 */
-                const galleryImages = document.querySelectorAll("#gallery img");  // id가 "gallery"인 요소 내부의 모든 <img> 요소를 선택
-                galleryImages.forEach(function(img) {    // galleryImages NodeList의 각 요소(이미지)에 대해 클릭 이벤트 리스너를 추가
-                    img.addEventListener("click", function() {
-                        showModal(this.src); // this.src = 클릭된 이미지의 소스
-                    });
-                });
-
-                // 모달창 닫기 버튼 클릭 이벤트 리스너 추가
-                const closeBtn = document.querySelector(".close");
-                closeBtn.addEventListener("click", closeModal);
-
-                // 숨겨진 이미지들에 대해서도 클릭 이벤트 리스너 추가
-                const hiddenImages = document.querySelectorAll("#hiddenImgs img");
-                hiddenImages.forEach(function(img) {
-                    img.addEventListener("click", function() {
-                        showModal(this.src);
-                    });
-                });
-            </script>
-
-            <!-- 지도 시작 -->
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=20719926bb335b7c09a4e4374833cf98">
-            </script>
-        <script>
-            var mapContainer = document.getElementById('map');
-            var mapOption = {
-                center: new kakao.maps.LatLng(37.525818, 126.928446),
-                level: 2
-            };
-            var map = new kakao.maps.Map(mapContainer, mapOption);
-
-            /* 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수 */
-            function setMapType(maptype) {
-                var roadmapControl = document.getElementById('btnRoadmap');
-                var skyviewControl = document.getElementById('btnSkyview');
-                if (maptype === 'roadmap') {
-                    map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
-                    roadmapControl.className = 'selected_btn';
-                    skyviewControl.className = 'btn';
-                } else {
-                    map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
-                    skyviewControl.className = 'selected_btn';
-                    roadmapControl.className = 'btn';
-                }
-            }
-
-            // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
-            function zoomIn() {
-                map.setLevel(map.getLevel() - 1);
-            }
-
-            // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
-            function zoomOut() {
-                map.setLevel(map.getLevel() + 1);
-            }
-
-            // 마커가 표시될 위치입니다
-            var markerPosition  = new kakao.maps.LatLng(37.525818, 126.928446);
-
-            // 마커를 생성합니다
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
+        /* 이미지 클릭 이벤트 리스너 추가 */
+        const galleryImages = document.querySelectorAll("#gallery img");  // id가 "gallery"인 요소 내부의 모든 <img> 요소를 선택
+        galleryImages.forEach(function(img) {    // galleryImages NodeList의 각 요소(이미지)에 대해 클릭 이벤트 리스너를 추가
+            img.addEventListener("click", function() {
+                showModal(this.src); // this.src = 클릭된 이미지의 소스
             });
+        });
 
-            // 마커가 지도 위에 표시되도록 설정합니다
-            marker.setMap(map);
+        // 모달창 닫기 버튼 클릭 이벤트 리스너 추가
+        const closeBtn = document.querySelector(".close");
+        closeBtn.addEventListener("click", closeModal);
 
-        </script>
+        // 숨겨진 이미지들에 대해서도 클릭 이벤트 리스너 추가
+        const hiddenImages = document.querySelectorAll("#hiddenImgs img");
+        hiddenImages.forEach(function(img) {
+            img.addEventListener("click", function() {
+                showModal(this.src);
+            });
+        });
+    </script>
 
-        <!-- sub Modal 창 시작 -->
-        <script>
-            // 모달창 열기 버튼 가져오기 //
-            var subModal = document.getElementById("subModal");
-            var subButton = document.getElementById("subButton");
+    <!-- 지도 시작 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=20719926bb335b7c09a4e4374833cf98">
+    </script>
+    <script>
+        var mapContainer = document.getElementById('map');
+        var mapOption = {
+            center: new kakao.maps.LatLng(37.525818, 126.928446),
+            level: 2
+        };
+        var map = new kakao.maps.Map(mapContainer, mapOption);
 
-            // 모달창 열기 //
-            subButton.onclick = function (){
-                subModal.style.display = "block";
+        /* 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수 */
+        function setMapType(maptype) {
+            var roadmapControl = document.getElementById('btnRoadmap');
+            var skyviewControl = document.getElementById('btnSkyview');
+            if (maptype === 'roadmap') {
+                map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
+                roadmapControl.className = 'selected_btn';
+                skyviewControl.className = 'btn';
+            } else {
+                map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
+                skyviewControl.className = 'selected_btn';
+                roadmapControl.className = 'btn';
             }
+        }
 
-            // 모달창 닫기
-            var subModalClose = document.getElementById("subModalclose");
-            subModalClose.onclick = function (){
+        // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomIn() {
+            map.setLevel(map.getLevel() - 1);
+        }
+
+        // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomOut() {
+            map.setLevel(map.getLevel() + 1);
+        }
+
+        // 마커가 표시될 위치입니다
+        var markerPosition  = new kakao.maps.LatLng(37.525818, 126.928446);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+    </script>
+
+    <!-- sub Modal 창 시작 -->
+    <script>
+        // 모달창 열기 버튼 가져오기 //
+        var subModal = document.getElementById("subModal");
+        var subButton = document.getElementById("subButton");
+
+        // 모달창 열기 //
+        subButton.onclick = function (){
+            subModal.style.display = "block";
+        }
+
+        // 모달창 닫기
+        var subModalClose = document.getElementById("subModalclose");
+        subModalClose.onclick = function (){
+            subModal.style.display = "none";
+        }
+
+        // 밖에 클릭하면 모달창 닫기 //
+        window.onclick = function(event) {
+            if (event.target == subModal) {
                 subModal.style.display = "none";
             }
+        }
+    </script>
 
-            // 밖에 클릭하면 모달창 닫기 //
-            window.onclick = function(event) {
-                if (event.target == subModal) {
-                    subModal.style.display = "none";
-                }
-            }
-        </script>
+    <!-- scroll 버튼 -->
+    <script>
+        const arrowBefore = document.getElementById('arrowbefore');
+        const arrowAfter = document.getElementById('arrowafter');
 
-        <!-- scroll 버튼 -->
-        <script>
-            const arrowBefore = document.getElementById('arrowbefore');
-            const arrowAfter = document.getElementById('arrowafter');
+        const scrollBut = document.getElementById('scrollBut');
+        scrollBut.addEventListener('mouseover', showArrowAfter);
+        scrollBut.addEventListener('mouseout', showArrowBefore);
 
-            const scrollBut = document.getElementById('scrollBut');
-            scrollBut.addEventListener('mouseover', showArrowAfter);
-            scrollBut.addEventListener('mouseout', showArrowBefore);
+        function showArrowAfter() {
+            arrowBefore.style.display = 'none';
+            arrowAfter.style.display = 'inline';
+        }
 
-            function showArrowAfter() {
-                arrowBefore.style.display = 'none';
-                arrowAfter.style.display = 'inline';
-            }
+        function showArrowBefore() {
+            arrowBefore.style.display = 'inline';
+            arrowAfter.style.display = 'none';
+        }
 
-            function showArrowBefore() {
-                arrowBefore.style.display = 'inline';
-                arrowAfter.style.display = 'none';
-            }
-
-            function scrollToTop() {
-                window.scrollTo({top:0, behavior:'smooth'});
-            }
-        </script>
+        function scrollToTop() {
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+    </script>
 
 
 
 
 
-    </main>
+</main>
 </body>
 </html>
