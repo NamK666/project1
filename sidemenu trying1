@@ -47,7 +47,7 @@
             position: fixed;
             z-index: 1;
             top: 0;
-            right: 0; /* 왼쪽에서 오른쪽으로 변경 */
+            right: 1100px; /* 왼쪽에서 오른쪽으로 변경 */
             background-color: #111;
             overflow-x: hidden;
             transition: 0.3s; /* 펼침속도 */
@@ -952,6 +952,7 @@
         function  closeMenu() {
             document.getElementById("mobileMain").style.marginRight= "0";
             document.querySelector('.sidebar').style.width = "0";
+            document.querySelector('.mobileBut').style.display = 'block';
         }
 
     </script>
