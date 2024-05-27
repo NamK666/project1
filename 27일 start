@@ -42,7 +42,7 @@
             position: fixed;
             z-index: 1;
             top: 0;
-            right: 1100px; /* 왼쪽에서 오른쪽으로 변경 */
+            right: 0; /* 오른쪽끝에서 사이드바 열리게하기 */
             background-color: #111;
             overflow-x: hidden;
             transition: 0.3s; /* 펼침속도 */
@@ -1160,10 +1160,10 @@
 
         <!-- 모바일용 Footer Nav -->
         <section class="footerNav">
-                <a href="" id="about2">About</a>
-                <a href="" id="blog2">Blog</a>
-                <a href="" id="support2">Support</a>
-                <a href="" id="termsofuse">Terms of Use</a>
+            <a href="" id="about2">About</a>
+            <a href="" id="blog2">Blog</a>
+            <a href="" id="support2">Support</a>
+            <a href="" id="termsofuse">Terms of Use</a>
         </section>
     </footer>
 
@@ -1186,12 +1186,12 @@
     <!-- 사이드 메뉴 시작 -->
     <script>
         function openMenu() {
-            document.querySelector('.sidebar').style.width = "250px";
+            document.querySelector('.sidebar').style.width = "200px"; // 사이드바 넓이
             document.querySelector('.mobileBut').style.display = 'none';
         }
 
         function  closeMenu() {
-            document.getElementById("mobileMain").style.marginRight= "0";
+            document.getElementById("mobileMain").style.marginRight= "110px";
             document.querySelector('.sidebar').style.width = "0";
             document.querySelector('.mobileBut').style.display = 'block';
         }
