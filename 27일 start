@@ -565,7 +565,7 @@
             left: 50%;
             transform: translate(-50%, -50%); /* 자신의x축, y축길이의 50%만큼 왼쪽 위로 이동시키기 */
             @media (max-width: 400px) {
-                top: 500px;
+                top: 400px;
             }
         }
         .close {
@@ -577,7 +577,7 @@
             font-weight: bold;
             transition: 0.3s;
             @media (max-width: 400px) {
-                top: 190px;
+                top: 100px;
                 right: 40px;
             }
         }
