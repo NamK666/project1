@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>archivePDF</title>
+        
+</head>
+
+
+<body class="body">
+
+<header class="headerBackground">
+    <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo" alt="homeLogo"></a>
+    <section class="headerSec">
+        <a href=""><div id="home">Home</div></a>
+        <a href=""><div id="about">About</div></a>
+        <a href=""><div id="support">Support</div></a>
+    </section>
+    <a href=""><button id="download">Download</button></a>
+
+    <article>
+        <h1 id="art1subject"> Deconstructed Silhouettes of <br>
+            Number (N)ine</h1>
+        <h2 id="art1story">Influenced by Kurt Cobain and Native American culture, in 2005,
+            <br>Takahiro Miyashita released his most seminal work
+            <br>at Number (N)ine: “The High Streets.”</h2>
+        <a href=""><button id="fullArt1">Full Article</button></a>
+    </article>
+    <img src="nn%20art1.png" alt="numbernine model" id="nnModel">
+
+    <!-- 모바일 메뉴 버튼 -->
+    <div id="mobileMain">
+        <button class="mobileBut" onclick="openMenu()">
+            ☰</button>
+    </div>
+
+    <!-- 모바일 사이드 메뉴 -->
+    <section>
+        <div class="sidebar">
+            <a class="closebtn" onclick="closeMenu()">→</a>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Support</a>
+            <a href=""><button id="mobileDownload">Download</button></a>
+        </div>
+
+    </section>
+
+
+
+</header>
+
+<main>
+
+    <section>
+        <img src="kap%20scanbook.png" alt="kapital bookscan" id="kapitalimg">
+        <h1 id="freeaccIntro1">You Can Get A Free Access
+            <br>to Various Designer Book Scans</h1>
+        <h2 id="freeaccIntro2">Ann Demeulemeester, Carol Christian Poell, Helmut Lang, Comme Des Garcons,
+            <br>Martin Margiela, Yohji Yamamoto, Issey Miyake and more..</h2>
+        <p>
+        <h1 id="freeaccIntro3">Contact Us for the Physical Books</h1>
+        <h2 id="freeaccIntro4">We own more than 500+ physical books from 1970s to 2010s.
+            <br>Contact us for more detailed information.</h2>
+        </p>
+    </section>
+
+    <section>
+        <div class="galleryContainer">
+            <div id="gallery">
+                <img src="uc1.png" alt="undercover snapshot1" id="uc1">
+                <img src="uc2.png" alt="undercover snapshot2" id="uc2">
+                <img src="uc3.png" alt="undercover snapshot3" id="uc3">
+
+                <img src="solo1.png" alt="soloist snapshot1" id="solo1">
+                <img src="solo2.png" alt="soloist snapshot1" id="solo2">
+                <img src="solo3.png" alt="soloist snapshot1" id="solo3">
+            </div>
+
+            <div id="hiddenImgs" style="display: none";>
+                <img src="raf1.png" alt="rafsimons snapshot1" id="raf1">
+                <img src="raf2.png" alt="rafsimons snapshot2" id="raf2">
+                <img src="raf3.png" alt="rafsimons snapshot3" id="raf3">
+            </div>
+
+            <div>
+                <span id="continueEx">Continue exploring Scans</span>
+                <button id="showMore">Show more</button>
+            </div>
+
+            <!-- 이미지 확대 모달창 형성 -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- 지도 바로 윗부분 -->
+        <div class="lineParents">
+            <hr class="line">
+        </div>
+        <h1 id="location">Showroom Location</h1>
+        <h2 id="location2">3F, 108, Yeoui-daero, Yeongdeungpo-gu, Seoul, Republic of Korea</h2>
+
+        <!-- 지도 -->
+        <div class="map_wrap">
+            <div id="map"></div>
+
+            <!-- 지도타입 컨트롤 div -->
+            <div class="custom_typecontrol radius_border">
+                <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+                <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+            </div>
+
+            <!-- 지도 확대, 축소 컨트롤 div -->
+            <div class="custom_zoomcontrol radius_border">
+                <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="지도 확대"></span>
+                <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="지도 축소"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe 부분 시작 -->
+    <section>
+        <div class="navyBox">
+            <h1 id="subscribe1">Subscribe to our Post</h1>
+            <h2 id="subscribe2"><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <br>A adipisci labore asdfads dfadsf</h2>
+            <form action="" method="post">
+                <div class="whiteBox">
+                    <label for="mail"></label>
+                    <input type="email" autocomplete="on" placeholder="Enter your e-mail address" id="mail" name="mail">
+                    <button type="button" id="subButton">Subscribe</button>
+                    <img src="mail.png" alt="" id="mailPic">
+                </div>
+            </form>
+        </div>
+        <!-- Subscribe 뒤 배경 -->
+        <div class="subBackground"></div>
+    </section>
+
+    <footer class="footer">
+        <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo2" alt="homeLogo"></a>
+        <a href=""><img src="instalogo.jpg" id="instalogo" alt="instaLogo"></a>
+        <a href=""><img src="facebooklogo.jpg" id="facebooklogo" alt="facebookLogo"></a>
+        <a href=""><img src="youtubelogo.jpg" id="youtubelogo" alt="youtubeLogo"></a>
+
+        <!-- 스크롤 버튼 -->
+        <button id="scrollBut" onclick="scrollToTop()">
+            <img src="arrowbefore.png" alt="scroll Up Button" id="arrowbefore">
+            <img src="arrowafter.png" alt="scroll Up Button" id="arrowafter" style="display: none">
+        </button>
+
+        <!-- 모바일용 Footer Nav -->
+        <section class="footerNav">
+            <a href="" id="about2">About</a>
+            <a href="" id="blog2">Blog</a>
+            <a href="" id="support2">Support</a>
+            <a href="" id="termsofuse">Terms of Use</a>
+        </section>
+    </footer>
+
+
+
+    <!-- subscribe Modal 창 -->
+    <section id="subModal" class="subModal">
+        <div class="modal-content">
+            <img src="logoForModal.png" alt="archivePdf Logo" id="pdfLogoForModal">
+            <h1 id="modalH1">Thank you!</h1>
+            <h2 id="modalH2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+            <button id="subModalclose">Confirm</button>
+        </div>
+
+    </section>
+
+  </main>
+</body>
+</html>
