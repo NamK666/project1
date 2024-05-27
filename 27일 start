@@ -679,6 +679,10 @@
             z-index:1;
             font-size:12px;
             font-family:'Malgun Gothic', '맑은 고딕', sans-serif;
+            @media (max-width: 400px) {
+                bottom: 140px;
+                left: 185px;
+            }
         }
         .custom_typecontrol span {
             display:block;
@@ -718,6 +722,10 @@
             overflow:hidden;
             z-index:1;
             background-color:#f5f5f5;
+            @media (max-width: 400px) {
+                bottom: 140px;
+                left: 278px;
+            }
         }
         .custom_zoomcontrol span {
             display:block;
