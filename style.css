@@ -1,14 +1,13 @@
 /* header 시작 */
         .headerBackground{
             width: 100%;
-            background-image: url("green background art1.png");
+            background-image: url("./imgs/green background art1.png");
             height: 900px;
             @media (max-width: 400px) {
                 width: 100%;
                 height: 802px;
             }
         }
-
         #pdflogo{
             position: absolute;   /* top, left 사용을 위해 position 지정 */
             width:60px;
@@ -25,7 +24,6 @@
                 left: 20px;
             }
         }
-
 
         /* 모바일 메뉴 */
         .sidebar {
@@ -793,7 +791,7 @@
         }
         /* subscribe 뒤 배경 */
         .subBackground{
-            background-image: url("subBackground.png");
+            background-image: url("./imgs/subBackground.png");
             width: 1920px;
             height: 340px;
             position: relative;
@@ -880,7 +878,7 @@
             width: 30%;
             height: 50%;
             overflow: hidden;
-            background-image: url("subModalBackground.png");
+            background-image: url("./imgs/subModalBackground.png");
             left: 700px;
             top: 300px;
             @media (max-width: 400px) {
