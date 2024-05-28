@@ -9,7 +9,7 @@
         /* header 시작 */
         .headerBackground{
             width: 100%;
-            background-image: {./imgs/"green background art1.png"};
+            background-image: url("./imgs/"green background art1.png");
             height: 900px;
             @media (max-width: 400px) {
                 width: 100%;
@@ -799,7 +799,7 @@
         }
         /* subscribe 뒤 배경 */
         .subBackground{
-            background-image: url("subBackground.png");
+            background-image: url("./imgs/subBackground.png");
             width: 1920px;
             height: 340px;
             position: relative;
@@ -886,7 +886,7 @@
             width: 30%;
             height: 50%;
             overflow: hidden;
-            background-image: url("subModalBackground.png");
+            background-image: url("./imgs/subModalBackground.png");
             left: 700px;
             top: 300px;
             @media (max-width: 400px) {
@@ -1088,7 +1088,7 @@
 <body class="body">
 
 <header class="headerBackground">
-    <a href=""><img src="./imgs/archivepdf&20logo.jpeg" id="pdflogo" alt="homeLogo"></a>
+    <a href=""><img src="./imgs/archivepdf%20logo.jpeg" id="pdflogo" alt="homeLogo"></a>
     <section class="headerSec">
         <a href=""><div id="home">Home</div></a>
         <a href=""><div id="about">About</div></a>
@@ -1131,7 +1131,7 @@
 <main>
 
     <section>
-        <img src="kap%20scanbook.png" alt="kapital bookscan" id="kapitalimg">
+        <img src="./imgs/kap%20scanbook.png" alt="kapital bookscan" id="kapitalimg">
         <h1 id="freeaccIntro1">You Can Get A Free Access
             <br>to Various Designer Book Scans</h1>
         <h2 id="freeaccIntro2">Ann Demeulemeester, Carol Christian Poell, Helmut Lang, Comme Des Garcons,
@@ -1146,19 +1146,19 @@
     <section>
         <div class="galleryContainer">
             <div id="gallery">
-                <img src="uc1.png" alt="undercover snapshot1" id="uc1">
-                <img src="uc2.png" alt="undercover snapshot2" id="uc2">
-                <img src="uc3.png" alt="undercover snapshot3" id="uc3">
+                <img src="./imgs/uc1.png" alt="undercover snapshot1" id="uc1">
+                <img src="./imgs/uc2.png" alt="undercover snapshot2" id="uc2">
+                <img src="./imgs/uc3.png" alt="undercover snapshot3" id="uc3">
 
-                <img src="solo1.png" alt="soloist snapshot1" id="solo1">
-                <img src="solo2.png" alt="soloist snapshot1" id="solo2">
-                <img src="solo3.png" alt="soloist snapshot1" id="solo3">
+                <img src="./imgs/solo1.png" alt="soloist snapshot1" id="solo1">
+                <img src="./imgs/solo2.png" alt="soloist snapshot1" id="solo2">
+                <img src="./imgs/solo3.png" alt="soloist snapshot1" id="solo3">
             </div>
 
             <div id="hiddenImgs" style="display: none";>
-                <img src="raf1.png" alt="rafsimons snapshot1" id="raf1">
-                <img src="raf2.png" alt="rafsimons snapshot2" id="raf2">
-                <img src="raf3.png" alt="rafsimons snapshot3" id="raf3">
+                <img src="./imgs/raf1.png" alt="rafsimons snapshot1" id="raf1">
+                <img src="./imgs/raf2.png" alt="rafsimons snapshot2" id="raf2">
+                <img src="./imgs/raf3.png" alt="rafsimons snapshot3" id="raf3">
             </div>
 
             <div>
@@ -1211,7 +1211,7 @@
                     <label for="mail"></label>
                     <input type="email" autocomplete="on" placeholder="Enter your e-mail address" id="mail" name="mail">
                     <button type="button" id="subButton">Subscribe</button>
-                    <img src="mail.png" alt="" id="mailPic">
+                    <img src="./imgs/mail.png" alt="" id="mailPic">
                 </div>
             </form>
         </div>
@@ -1220,15 +1220,15 @@
     </section>
 
     <footer class="footer">
-        <a href=""><img src="archivepdf%20logo.jpeg" id="pdflogo2" alt="homeLogo"></a>
-        <a href=""><img src="instalogo.jpg" id="instalogo" alt="instaLogo"></a>
-        <a href=""><img src="facebooklogo.jpg" id="facebooklogo" alt="facebookLogo"></a>
-        <a href=""><img src="youtubelogo.jpg" id="youtubelogo" alt="youtubeLogo"></a>
+        <a href=""><img src="./imgs/archivepdf%20logo.jpeg" id="pdflogo2" alt="homeLogo"></a>
+        <a href=""><img src="./imgs/instalogo.jpg" id="instalogo" alt="instaLogo"></a>
+        <a href=""><img src="./imgs/facebooklogo.jpg" id="facebooklogo" alt="facebookLogo"></a>
+        <a href=""><img src="./imgs/youtubelogo.jpg" id="youtubelogo" alt="youtubeLogo"></a>
 
         <!-- 스크롤 버튼 -->
         <button id="scrollBut" onclick="scrollToTop()">
-            <img src="arrowbefore.png" alt="scroll Up Button" id="arrowbefore">
-            <img src="arrowafter.png" alt="scroll Up Button" id="arrowafter" style="display: none">
+            <img src="./imgs/arrowbefore.png" alt="scroll Up Button" id="arrowbefore">
+            <img src="./imgs/arrowafter.png" alt="scroll Up Button" id="arrowafter" style="display: none">
         </button>
 
         <!-- 모바일용 Footer Nav -->
@@ -1245,7 +1245,7 @@
     <!-- subscribe Modal 창 -->
     <section id="subModal" class="subModal">
         <div class="modal-content">
-            <img src="logoForModal.png" alt="archivePdf Logo" id="pdfLogoForModal">
+            <img src="./imgs/logoForModal.png" alt="archivePdf Logo" id="pdfLogoForModal">
             <h1 id="modalH1">Thank you!</h1>
             <h2 id="modalH2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
             <button id="subModalclose">Confirm</button>
